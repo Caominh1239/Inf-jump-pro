@@ -1,0 +1,6 @@
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.JumpRequest:connect(function()
+    game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
+    game:GetService("UserInputService"):SetJumpPower(50)
+end)
